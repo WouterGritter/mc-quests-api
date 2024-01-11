@@ -42,6 +42,7 @@ public class QuestsApiPlugin extends JavaPlugin {
     public void onDisable() {
         questStateService.flushStates().join();
         questsGUIService.onDisable();
+        questDataStore.dispose();
     }
 
     public QuestDataStore getQuestDataStore() {
