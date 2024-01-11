@@ -13,13 +13,13 @@ import org.bukkit.event.block.BlockBreakEvent;
 
 import static org.bukkit.event.EventPriority.LOWEST;
 
-public class BlockBreakQuestService extends QuestHandler {
+public class BlockBreakQuestHandler extends QuestHandler {
 
-    public BlockBreakQuestService(ExampleQuestsPlugin plugin) {
+    public BlockBreakQuestHandler(ExampleQuestsPlugin plugin) {
         super(
                 plugin,
                 new QuestTypeBuilder(plugin)
-                        .withName("blocks-broken")
+                        .withName("blocks_broken")
                         .withDisplayName("Block breaking quest")
                         .withDescription("Get more points by breaking blocks.")
                         .withCached(false)

@@ -13,9 +13,9 @@ import org.bukkit.event.player.PlayerMoveEvent;
 
 import static org.bukkit.event.EventPriority.LOWEST;
 
-public class WalkingQuestService extends QuestHandler {
+public class WalkingQuestHandler extends QuestHandler {
 
-    public WalkingQuestService(ExampleQuestsPlugin plugin) {
+    public WalkingQuestHandler(ExampleQuestsPlugin plugin) {
         super(
                 plugin,
                 new QuestTypeBuilder(plugin)
