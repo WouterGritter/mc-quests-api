@@ -1,0 +1,4 @@
+mongodb:
+  url: 'mongodb://root:example@portainer.andledon:27017/'
+  database: mcquests
+  collection: quests

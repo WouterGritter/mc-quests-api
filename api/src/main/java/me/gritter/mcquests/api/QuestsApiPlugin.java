@@ -22,8 +22,14 @@ public class QuestsApiPlugin extends JavaPlugin {
     public void onEnable() {
         instance = this;
 
+        saveDefaultConfig();
+
 //        questDataStore = new MemoryQuestDataStore();
-        questDataStore = new MongoDBQuestDataStore("mongodb://root:example@portainer.andledon:27017/", "mcquests", "quests");
+        questDataStore = new MongoDBQuestDataStore(
+                getConfig().getString("mongodb.url"),
+                getConfig().getString("mongodb.database"),
+                getConfig().getString("mongodb.collection")
+        );
 
         questTypeService = new QuestTypeService();
         questStateService = new QuestStateService();
